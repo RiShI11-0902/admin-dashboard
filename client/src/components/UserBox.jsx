@@ -23,7 +23,7 @@ const UserBox = ({show,setShow,getuser,user,setcurrEdit}) => {
         e.preventDefault();
         console.log("New User Data:", formData);
         try {
-            const send = await axios.post("http://localhost:5000/user/adduser", formData)
+            const send = await axios.post("/user/adduser", formData)
             console.log(send);
         } catch (error) {
             
@@ -33,7 +33,7 @@ const UserBox = ({show,setShow,getuser,user,setcurrEdit}) => {
 
     const get = async ()=>{
         try {
-            const response = await axios.get("http://localhost:5000/user/get-role-department");
+            const response = await axios.get("/user/get-role-department");
             console.log("Fetched Data:", response.data.data);
         
             const roles = response.data.data.map(item => item.role).flat();

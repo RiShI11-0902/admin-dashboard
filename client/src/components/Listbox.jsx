@@ -60,7 +60,7 @@ const Listbox = ({ getuser, loading, originalUser, filterusers, setFilterusers }
 
     const deleteuser = async (id)=>{
         try {
-            const response = await axios.post(`http://localhost:5000/user/deleteuser`, {id});
+            const response = await axios.post(`/user/deleteuser`, {id});
             console.log(response.data.message);
             // Refresh the user list after deletion
         } catch (error) {

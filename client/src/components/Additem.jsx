@@ -16,7 +16,7 @@ const AddItem = ({ addNew, setAddNew, item }) => {
 
     // Add further logic to handle form submission (e.g., sending data to an API)
 
-    const data = await axios.post("http://localhost:5000/user/role-department", {
+    const data = await axios.post("/user/role-department", {
       role: Array.isArray(role) ? role : [role], 
       department: Array.isArray(department) ? department : [department],
     })
