@@ -34,14 +34,10 @@ git clone https://github.com/your-username/user-management-system.git
 cd user-management-system
 Install dependencies for the backend:
 
-bash
-Copy code
 cd backend
 npm install
 Install dependencies for the frontend:
 
-bash
-Copy code
 cd ../frontend
 npm install
 Set up environment variables:
@@ -49,7 +45,7 @@ Set up environment variables:
 Create a .env file in the backend directory.
 Add the following:
 env
-Copy code
+
 PORT=5000
 MONGO_URI=your_mongo_connection_string
 Run the backend:
@@ -84,8 +80,7 @@ Method: DELETE
 URL: /user/update/:id
 Method: PUT
 Body:
-json
-Copy code
+
 {
   "name": "Jane Doe",
   "dept": "HR",
@@ -96,8 +91,7 @@ Copy code
 URL: /user/get-role-department
 Method: GET
 Folder Structure
-lua
-Copy code
+
 user-management-system/
 ├── backend/
 │   ├── models/
